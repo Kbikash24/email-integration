@@ -1,63 +1,140 @@
-import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.js file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+    <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+      <main className="flex flex-col items-center justify-center px-6 py-12 text-center">
+        {/* Hero Section */}
+        <div className="mb-8">
+          <div className="mb-6 inline-block rounded-2xl bg-gradient-to-r from-blue-600 to-purple-600 p-4 shadow-xl">
+            <svg
+              className="h-12 w-12 text-white"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+              />
+            </svg>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+
+        <h1 className="mb-4 text-5xl font-bold tracking-tight text-gray-900 dark:text-white md:text-6xl">
+          Email Integration
+        </h1>
+        
+        <p className="mb-8 max-w-2xl text-xl text-gray-600 dark:text-gray-300">
+          Seamlessly manage your email communications with our powerful integration platform.
+          Connect, organize, and streamline your workflow.
+        </p>
+
+        {/* CTA Buttons */}
+        <div className="flex flex-col gap-4 sm:flex-row sm:gap-6">
+          <Link
+            href="/auth/signup"
+            className="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-gradient-to-br from-blue-600 to-purple-600 px-8 py-4 text-lg font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            <span className="relative">Get Started</span>
+            <svg
+              className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M13 7l5 5m0 0l-5 5m5-5H6"
+              />
+            </svg>
+          </Link>
+
+          <Link
+            href="/auth/login"
+            className="inline-flex items-center justify-center rounded-full border-2 border-gray-300 bg-white px-8 py-4 text-lg font-semibold text-gray-900 shadow-md transition-all duration-300 hover:scale-105 hover:border-blue-600 hover:bg-gray-50 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:hover:border-purple-500 dark:hover:bg-gray-700"
           >
-            Documentation
-          </a>
+            Sign In
+          </Link>
+        </div>
+
+        {/* Features */}
+        <div className="mt-20 grid max-w-5xl gap-8 sm:grid-cols-3">
+          <div className="rounded-2xl bg-white p-6 shadow-lg transition-all duration-300 hover:scale-105 dark:bg-gray-800">
+            <div className="mb-4 inline-block rounded-full bg-blue-100 p-3 dark:bg-blue-900">
+              <svg
+                className="h-6 w-6 text-blue-600 dark:text-blue-300"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M13 10V3L4 14h7v7l9-11h-7z"
+                />
+              </svg>
+            </div>
+            <h3 className="mb-2 text-xl font-semibold text-gray-900 dark:text-white">
+              Fast & Secure
+            </h3>
+            <p className="text-gray-600 dark:text-gray-400">
+              Lightning-fast email processing with enterprise-grade security
+            </p>
+          </div>
+
+          <div className="rounded-2xl bg-white p-6 shadow-lg transition-all duration-300 hover:scale-105 dark:bg-gray-800">
+            <div className="mb-4 inline-block rounded-full bg-purple-100 p-3 dark:bg-purple-900">
+              <svg
+                className="h-6 w-6 text-purple-600 dark:text-purple-300"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
+                />
+              </svg>
+            </div>
+            <h3 className="mb-2 text-xl font-semibold text-gray-900 dark:text-white">
+              Customizable
+            </h3>
+            <p className="text-gray-600 dark:text-gray-400">
+              Tailor your email workflow to match your unique needs
+            </p>
+          </div>
+
+          <div className="rounded-2xl bg-white p-6 shadow-lg transition-all duration-300 hover:scale-105 dark:bg-gray-800">
+            <div className="mb-4 inline-block rounded-full bg-green-100 p-3 dark:bg-green-900">
+              <svg
+                className="h-6 w-6 text-green-600 dark:text-green-300"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                />
+              </svg>
+            </div>
+            <h3 className="mb-2 text-xl font-semibold text-gray-900 dark:text-white">
+              Reliable
+            </h3>
+            <p className="text-gray-600 dark:text-gray-400">
+              99.9% uptime with 24/7 monitoring and support
+            </p>
+          </div>
         </div>
       </main>
     </div>

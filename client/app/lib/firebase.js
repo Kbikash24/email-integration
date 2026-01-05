@@ -17,4 +17,12 @@ const app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0
 
 // Initialize Firebase Authentication and get a reference to the service
 export const auth = getAuth(app);
+
+// Helper function to get ID token
+export const getIdToken = async () => {
+  const user = auth.currentUser;
+  if (!user) throw new Error('No authenticated user');
+  return await user.getIdToken();
+};
+
 export default app;

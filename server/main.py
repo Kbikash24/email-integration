@@ -7,7 +7,7 @@ app = flask.Flask(__name__)
 app.config["DEBUG"] = True  # Enable debug mode for development
 app.config['JSON_SORT_KEYS'] = False  # Preserve JSON key order for consistent API responses
 # Enable Cross-Origin Resource Sharing for frontend integration
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "*", "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"], "allow_headers": ["Content-Type", "Authorization", "account_id"]}})
 # Register the main API blueprint with all namespace routes
 app.register_blueprint(blueprint)
 if __name__ == "__main__":

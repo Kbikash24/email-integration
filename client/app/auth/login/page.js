@@ -39,7 +39,7 @@ export default function Login() {
       await signInWithEmailAndPassword(auth, formData.email, formData.password);
       
       // Redirect to home or dashboard
-      router.push('/');
+      router.push('/home');
     } catch (error) {
       console.error('Login error:', error);
       
@@ -79,7 +79,7 @@ export default function Login() {
       await signInWithPopup(auth, provider);
       
       // Redirect to home or dashboard
-      router.push('/');
+      router.push('/home');
     } catch (error) {
       console.error('Google sign-in error:', error);
       

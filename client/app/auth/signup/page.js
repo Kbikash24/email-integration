@@ -60,7 +60,7 @@ export default function SignUp() {
       });
 
       // Redirect to home or dashboard
-      router.push('/');
+      router.push('/home');
     } catch (error) {
       console.error('Signup error:', error);
       
@@ -96,7 +96,7 @@ export default function SignUp() {
       await signInWithPopup(auth, provider);
       
       // Redirect to home or dashboard
-      router.push('/');
+      router.push('/home');
     } catch (error) {
       console.error('Google sign-up error:', error);
       setError('Failed to sign up with Google. Please try again.');

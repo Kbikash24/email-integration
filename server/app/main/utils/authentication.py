@@ -5,12 +5,12 @@ from google.cloud import bigquery, storage
 from sqlalchemy import create_engine
 import json
 
-environment = "development"  # Change to "production" as needed
+environment = "development"
 
 if environment == "production":
-    file_path = 'app/main/files/bigquery-prod.json'
-    file_path_firebase = file_path
-    storage_client = storage.Client.from_service_account_json(file_path)
+
+ 
+    storage_client = storage.Client.from_service_account_json()
     storage_bucket = "instagram-345102.appspot.com"
     bucket = storage_client.get_bucket('vedasis-images')
 

@@ -4,6 +4,9 @@ server/backend/app/main/files/service_account_dev.json
 server/backend/app/main/files/bigquery-prod.json
 server/backend/app/main/files/client_secret.json
 
+# Ignore entire files folders with JSON credentials
+server/app/main/files/*.json
+
 # Python
 __pycache__/
 *.py[cod]
