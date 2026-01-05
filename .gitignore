@@ -1,0 +1,30 @@
+# Sensitive credential files
+server/backend/app/main/files/firebase_dev.json
+server/backend/app/main/files/service_account_dev.json
+server/backend/app/main/files/bigquery-prod.json
+server/backend/app/main/files/client_secret.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+*.egg-info/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,55 @@
+# Core Flask Dependencies
+itsdangerous==2.0.1      # Cryptographic signing utilities for Flask
+jinja2==3.0.1             # Template engine for Flask
+Flask==1.1.2              # Core Flask web framework
+Werkzeug==0.16.1          # WSGI utilities library
+flask-restplus==0.13.0    # Flask extension for REST APIs with Swagger documentation
+flask_cors                # Cross-Origin Resource Sharing support for Flask
+
+# Data Processing and Analytics
+pandas==1.5.3             # Data manipulation and analysis library
+pandas-gbq==0.26.1        # Google BigQuery connector for pandas
+numpy==1.21.5             # Numerical computing library
+
+# Development Tools
+tqdm                      # Progress bars for long-running operations
+
+# Production Server
+gunicorn==20.1.0          # WSGI HTTP Server for UNIX
+
+# Google Cloud Services
+google.oauth2l            # Google OAuth 2.0 library
+google-cloud-storage      # Google Cloud Storage client
+google-generativeai       # Google Generative AI API client
+google-cloud-aiplatform==1.47.0  # Google Cloud AI Platform services
+
+# Firebase Integration
+firebase-admin            # Firebase Admin SDK for authentication and Firestore
+
+# Payment Processing
+razorpay                  # Razorpay payment gateway integration
+
+# Web Scraping and Data Extraction
+bs4                       # Beautiful Soup for HTML parsing
+lxml                      # XML and HTML processing library
+
+# Image Processing
+pillow                    # Python Imaging Library for image manipulation
+
+# Graph and Network Analysis
+igraph                    # Graph analysis and visualization
+
+# Natural Language Processing
+wordcloud                 # Word cloud generation
+unidecode                 # Unicode transliteration
+nltk                      # Natural Language Toolkit
+
+# Database Connectivity
+sqlalchemy==1.4.54        # SQL toolkit and Object-Relational Mapping
+psycopg2-binary           # PostgreSQL adapter for Python
+
+# Youtube Scraping
+yt-dlp
+
+# YouTube Transcript API
+youtube-transcript-api==1.1.1
